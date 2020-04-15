@@ -1,0 +1,488 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'RoadRage';
+  src: url('Road_Rage.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Sofia';
+  src: url('sofia.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Tox';
+  src: url('ToxTypewriter.ttf') format('truetype');
+}
+html {
+  scroll-behavior: smooth;
+}
+#about,#music,#merchan{
+  display: none;
+}
+.background {
+  width: 100%;
+  position: relative;
+}
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+}
+.nav a img {
+  margin-top: 1vw;
+  margin-left: 2vw;
+}
+.nav a img {
+  max-height: 10vw;
+}
+.nav .linkk {
+  margin-right: 37vw;
+}
+.nav .linkk a {
+  font-family: 'Sofia';
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5vw;
+  padding-left: 3vw;
+}
+.nav .linkk a:hover {
+  color: rgb(242,240,45);
+}
+.nav .linkk .icon {
+  display: none;
+}
+.home {
+  height: auto;;
+  margin-top: -1px;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.home .image .watch {
+  position: absolute;
+  z-index: 1;
+  top: 17%;
+  right: 44%;
+  text-align: center;
+}
+.home .image .watch a {
+  text-decoration: none;
+  font-family: 'RoadRage';
+  font-weight: normal;
+  color: rgb(242,240,45);
+  font-size: 2vw;
+}
+.home .abt {
+  margin-top: -4px;
+  display: flex;
+  justify-content: space-between;
+}
+.home .abt .text {
+  margin-left: 10vw;
+  margin-top: 5vw;
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  height: auto;
+}
+.home .abt .foto {
+  margin-top: 5vw;
+  margin-right: 10vw;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  right: 0;
+}
+.home .abt .text h1, .home .abt .text h2{
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: 100;
+  font-size: 6.5vw;
+}
+.home .abt .text h2 {
+  margin-top: -3vw;
+}
+.home .abt .text p{
+  font-family: 'Tox';
+  font-weight: 100;
+  font-size: 1.5vw;
+  color: #fff;
+}
+.home .abt .foto img {
+  width: 100%;
+  height: auto;
+}
+.home .abt .text a {
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: 100;
+  font-size: 2vw;
+  text-decoration: none;
+}
+.home .video {
+  display: flex;
+}
+.home .video iframe {
+  margin-top: 10vw;
+  margin-left: 18vw;
+  height: 35vw;
+  width: 65%;
+  position: absolute;
+  z-index: 1;
+}
+.home .merch {
+  display: flex;
+}
+.home .merch .textmerch{
+  margin-top: 15vw;
+  margin-left: 6vw;
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: -100px;
+  position: absolute;
+  z-index: 1;
+  font-size: 3.5vw;
+  width: 60%;
+  text-align: center;
+}
+.home .merch .textmerch a {
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: 100;
+  position: absolute;
+  text-decoration: none;
+  z-index: 1;
+  right: 30%;
+  font-size: 2vw;
+}
+.home .merch .slidemerch {
+  right: 0;
+  max-width: 100%;
+  position: absolute;
+  margin-right: 5vw;
+  margin-top: 7vw;
+  z-index: 4;
+}
+.home .merch .slidemerch .mySlides {
+  display: none;
+}
+.home .merch .slidemerch .mySlides img {
+  max-height: 30vw;
+  width: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  color: rgb(242,240,45);
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.about {
+  position: absolute;
+  z-index: -1;
+}
+.about .adl {
+  display: flex;
+  justify-content: space-between;
+}
+.about .adl .text {
+  margin-left: 15vw;
+  margin-top: 9vw;
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  height: auto;
+}
+.about .adl .foto {
+  margin-top: 9vw;
+  margin-right: 10vw;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  right: 0;
+}
+.about .adl .text h1, .about .adl .text h2{
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: 100;
+  font-size: 6.5vw;
+}
+.about .adl .text h2 {
+  margin-top: -3vw;
+}
+.about .adl .text p{
+  font-family: 'Tox';
+  font-weight: 100;
+  font-size: 1.5vw;
+  color: #fff;
+}
+.about .adl .foto img {
+  width: 100%;
+  height: auto;
+}
+.about .adl .text a {
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-weight: 100;
+  font-size: 2vw;
+  text-decoration: none;
+}
+.about .adl2 {
+  display: flex;
+}
+.about .adl2 h1 {
+  left: 18%;
+  margin-top: 23vw;
+  padding-right: -20px;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 5vw;
+  font-family: 'Tox';
+  color: rgb(123,0,96);
+  background-color: rgb(242,240,45);
+  width: 65%;
+}
+.about .adl2 h2 {
+  left: 20%;
+  margin-top: 29.5vw;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 5vw;
+  font-family: 'Tox';
+  color: rgb(123,0,96);
+  background-color: rgb(242,240,45);
+  width: 62%;
+}
+.about .adl3 {
+  display: flex;
+}
+.about .adl3 h1 {
+  margin-top: 5vw;
+  left: 15%;
+  position: absolute;
+  z-index: 1;
+  font-family: 'RoadRage';
+  color: rgb(242,240,45);
+  font-size: 6vw;
+  font-weight: 100;
+}
+.about .adl3 p {
+  margin-top: 20vw;
+  left: 15%;
+  position: absolute;
+  z-index: 1;
+  font-family: 'Tox';
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.5vw;
+}
+.about .adl3 .ft img{
+  height: auto;
+  width: 100%;
+}
+.about .adl3 .ft {
+  margin-top: 4vw;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 60%;
+}
+.music {
+  position: absolute;
+  z-index: -1;
+}
+.music .msc{
+  display: flex;
+}
+.music .msc .list {
+  padding:1vw 2vw 1vw 3vw;
+  margin-top: 10vw;
+  right: 20%;
+  position: absolute;
+  z-index: 1;
+  color: rgb(124,0,96);
+  background-color: rgba(255,255,255,0.5);
+  font-family: 'Tox';
+  font-size: 1.5vw;
+}
+.music .msc .list h1 {
+  font-weight: 100;
+  font-family: 'RoadRage';
+  font-size: 6vw;
+}
+.music .msc .list p {
+  margin-left: -1vw;
+}
+.music .msc2 {
+  display: flex;
+}
+.music .msc2 .msc2list {
+  margin-top: 5vw;
+  left: 15%;
+  position: absolute;
+  z-index: 2;
+  font-family: 'Tox';
+  color: #fff;
+  font-size: 1.5vw;
+}
+.music .msc2 .msc2list h1 {
+  font-weight: 100;
+  font-family: 'RoadRage';
+  color : rgb(242,240,45);
+  font-size: 7vw;
+}
+.music .msc2 .msc2list h2 {
+  font-weight: 100;
+  margin-top: -4vw;
+  font-family: 'RoadRage';
+  color : rgb(242,240,45);
+  font-size: 7vw;
+} 
+.music .msc2 .msc2list p {
+  font-weight: 100;
+  margin-left: -1vw;
+}
+.music .msc2 .mscfoto {
+  margin-top: 5vw;
+  position: absolute;
+  z-index: 1;
+  width: 55%;
+  right: 0;
+}
+.music .msc2 .mscfoto img {
+  height: auto;
+  width: 100%;
+}
+.merchan {
+  position: absolute;
+  z-index: -1;
+}
+.merchan1, .merchan2 {
+  display: flex;
+}
+.hood {
+  display: flex;
+  justify-content: space-between;
+}
+.merchan .merchan2 {
+  margin-top: -1vw;
+  margin-bottom: -1vw;
+}
+.merchan .merchan1 .hood {
+  left: 15%;
+  margin-top: 15vw;
+}
+.merchan .merchan2 .hood {
+  left: 15%;
+  margin-top: 5vw;
+}
+.merchan .hood {
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  width: 70%;
+  float: left;
+}
+.merchan .hood h3 {
+  margin-left: 1vw;
+  font-family: 'RoadRage';
+  color : rgb(242,240,45);
+  font-weight: 100;
+  font-size: 2vw;
+  text-align: center;
+}
+.merchan .hood img {
+  width: 100%;
+  height: auto;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+footer {
+  font-family: 'Sofia';
+  position: absolute;
+  height: 7vw;
+  width: 100%;
+  background-color: rgb(242,240,45);
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2vw;
+}
+footer h4 {
+  margin-top: 2vw;
+}
+.terms li {
+  font-size: 1.1vw;
+  color: #000;
+  display: inline-block;
+  font-weight: 200;
+  padding: 0px 20px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .nav .linkk a {display: none;}
+    .nav .linkk .icon {
+      margin-right: -30vw;
+      margin-top: -8vw;
+      float: right;
+      display: block;
+    }
+    .nav a {
+      padding: 10px;
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+  .nav.responsive {
+    position: fixed;
+    background-color: rgba(1,72,98,0.8);
+  }
+  .nav.responsive .linkk.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
